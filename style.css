@@ -1,0 +1,146 @@
+:root {
+    --primary-1: hsl(263, 55%, 52%);
+    --primary-2:  hsl(217, 19%, 35%);
+    --primary-3-text: hsl(219, 29%, 14%);
+    --primary-4-text: hsl(0, 0%, 100%);
+    --text: hsl(0, 0%, 81%);
+    --body-background: hsl(210, 46%, 95%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--body-background);
+    height: 100vh;
+    max-width: 144rem;
+    margin: 0 auto;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    font-size: 1.3rem;
+    color: var(--text);
+    line-height: 1.4;
+}
+
+main {
+    max-width: 111rem;
+    height: 57.2rem;
+    margin: 0 auto;
+    display: grid;
+    row-gap: 2.4rem;
+    column-gap: 3rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+article {
+    padding: 2.8rem 3rem;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+h1, h2 {
+    color: var(--primary-4-text);
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: var(--primary-4-text);
+    margin-bottom: 0.1rem;
+}
+
+h4 {
+    color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: 0.3px;
+    font-weight: 500;
+}
+
+.box-1 {
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: 35rem;
+    background-color: var(--primary-1);
+    grid-column: 1 / span 2;
+}
+
+.box-2 {
+    background-color: var(--primary-2);
+    grid-column-start: 3;
+}
+
+.box-3 {
+    background-color: var(--primary-4-text);
+    grid-row-start: 2;
+}
+
+
+.box-4 {
+    background-color: var(--primary-3-text);
+    grid-row-start: 2;
+    grid-column: 2 / span 2;
+}
+
+.box-5 {
+    background-color: var(--primary-4-text);
+    grid-row: 1 / span 2;
+}
+
+.box-3 h2,
+.box-5 h2 {
+    color: var(--primary-2);
+}
+
+.box-3 p,
+.box-5 p {
+    color: var(--primary-2);
+}
+
+.box-3 .author-name h3,
+.box-5 .author-name h3 {
+    color: var(--primary-2);
+
+}
+
+.author {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+img {
+    height: 2.8rem;
+    width: 2.8rem;
+    border-radius: 50%;
+    border: 1px solid var(--primary-4-text);
+}
+
+@media screen and (max-width: 800px) {
+    main {
+        margin: 0 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
+    
+
